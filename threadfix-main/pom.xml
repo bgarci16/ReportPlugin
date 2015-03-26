@@ -448,11 +448,6 @@
             <version>${validation-api.version}</version>
         </dependency>
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>${log4j.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.quartz-scheduler</groupId>
             <artifactId>quartz</artifactId>
             <version>${quartz.version}</version>
@@ -598,7 +593,11 @@
             <artifactId>complete</artifactId>
             <version>0.1.6</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.denimgroup.threadfix</groupId>
+            <artifactId>common-vulnerabilities-report</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <!-- the core, which includes Streaming API, shared low-level abstractions (but NOT data-binding) -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>

@@ -4,10 +4,10 @@
     <style>
         .report-text {
             text-align: center;
-            margin-top: 115px;
-            font-size: 17px;
+            margin-top: 0px;
+            font-size: 0px;
             font-weight:bold;
-            line-height:20px;
+            line-height:0px;
         }
     </style>
 </head>

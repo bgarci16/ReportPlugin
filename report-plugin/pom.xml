@@ -10,9 +10,42 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!--rename artifact ID on name of plugin-->
-    <artifactId>plugin-name-report</artifactId>
+    <artifactId>common-vulnerabilities-report</artifactId>
     <!--add description for plugin-->
-    <description>Contains functionality for...</description>
+    <description>Contains functionality for displaying common vulnerabilities.</description>
+
+    <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.7</version>
+                <executions>
+                    <execution>
+                        <id>copy-mappings</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/classes/mappings</outputDirectory>
+                            <overwrite>true</overwrite>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.directory}/src/main/resources/mappings</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
     <repositories>
         <repository>
